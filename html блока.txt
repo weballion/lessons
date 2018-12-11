@@ -1,0 +1,175 @@
+		<div class="uk-child-width-1-1" uk-grid>
+			<div class="uk-card uk-card-default uk-card-body uk-card-hover uk-position-reletive">
+				<div class="uk-text-small uk-position-top-right uk-background-primary uk-light tm-date" uk-tooltip="title: <?php echo $title_data; ?>; delay: 300">
+					10.10.2018
+				</div>
+				<div class="uk-position-bottom-right uk-padding-small">
+					<a uk-tooltip="title: <?php echo $title_edit_btn; ?>; delay: 300" class="tm-btns-edit" href="#toggle-animation" uk-toggle="target: #toggle-animation; animation: uk-animation-fade" uk-icon="icon: file-edit"></a>
+					<a uk-tooltip="title: <?php echo $title_delete; ?>; delay: 300" class="tm-btns-edit uk-text-danger" href="" uk-icon="icon: trash"></a>
+				</div>
+				<!-- Порядковый номре, дата добавления, название основного домена, дополнительные домены -->
+				<div class="uk-flex-middle uk-grid-small uk-margin-medium-bottom" uk-grid>
+					<div>
+						<div class="tm-num-card uk-background-primary uk-light uk-padding-small uk-text-center uk-text-small">
+							1
+						</div>
+					</div>
+					<div>
+						<h3>
+							<a class="uk-link-heading" href="#" target="_blank">
+								www.weballion.com
+							</a>
+						</h3>
+					</div>
+					<div class="uk-text-muted">
+						<?php echo $title_dop_domen; ?>: <a class="uk-link-text" href="#" target="_blank">weballion.com</a>, <a class="uk-link-text" href="#" target="_blank">weballion.com</a>
+					</div>
+				</div>
+				<!-- Порядковый номре, дата добавления, название основного домена, дополнительные домены -->
+				<div class="uk-flex-middle uk-grid-small uk-margin-small-bottom" uk-grid>
+					<div class="uk-h4 uk-heading-bullet">
+						<?php echo $title_hosting; ?> 
+					</div>
+					<div class="uk-text-muted">
+						(хостинг + домен)
+					</div>
+				</div>
+				<div>
+					<?php echo $title_link; ?>: <a class="uk-link-text" href="https://www.ukraine.com.ua" target="_blank">ukraine.com.ua</a>
+				</div>
+				<div>
+					<?php echo $title_login; ?>: admin
+				</div>
+				<div>
+					<?php echo $title_pass; ?>: 123456
+				</div>
+				<div>
+					Какой-то комментарий
+				</div>
+			</div>
+			
+			<!-- Форма редактирования -->
+			<div id="toggle-animation" class="uk-card uk-card-default uk-card-body uk-margin-small uk-position-reletive" hiddenn>
+				<div class="uk-position-top-right">
+					<?php 
+						include ("close-save-buttons.php");
+					?>
+				</div>
+				<div class="uk-position-bottom-right">
+					<?php 
+						include ("close-save-buttons.php");
+					?>
+				</div>
+				<form>
+					<fieldset class="uk-fieldset">
+						<div class="uk-h3 uk-heading-bullet">
+							<?php echo $title_edit; ?>
+						</div>
+						<div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+							<div>
+								<label class="uk-form-label uk-margin-small-bottom" for="edit-form-name">
+									<?php echo $title_edit_name; ?>
+								</label>
+								<div class="uk-form-controls">
+									<input class="uk-input" id="edit-form-name" type="text" placeholder="<?php echo $title_edit_name_ph; ?>">
+								</div>
+							</div>
+							<div>	
+								<label class="uk-form-label uk-margin-small-bottom" for="edit-form-name-link">
+									<?php echo $title_edit_name_link; ?>
+								</label>
+								<div class="uk-form-controls">
+									<input class="uk-input" id="edit-form-name-link" type="text" placeholder="<?php echo $title_edit_link_ph; ?>">
+								</div>
+							</div>
+						</div>
+						<div class="uk-margin">
+							<div class="uk-h4">
+								<?php echo $title_dop_domen; ?>
+							</div>
+							<div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+								<div class="uk-form-controls">
+									<input class="uk-input" id="" type="text" placeholder="<?php echo $title_dop_domen_ph; ?>">
+								</div>
+								<div class="uk-form-controls">
+									<input class="uk-input" id="" type="text" placeholder="<?php echo $title_dop_domen_ph; ?>">
+								</div>
+							</div>
+						</div>
+						
+						<div class="uk-h4">
+							<?php echo $title_hosting; ?>
+						</div>
+						<div class="uk-grid-small uk-child-width-1-1" uk-grid>
+							<div>
+								<div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+									<div>
+										<label class="uk-form-label uk-margin-small-bottom" for="edit-form-hosting-name">
+											<?php echo $title_edit_name; ?>
+										</label>
+										<div class="uk-form-controls">
+											<input class="uk-input" id="edit-form-hosting-name" type="text" placeholder="<?php echo $title_hosting_name; ?>">
+										</div>
+									</div>
+									<div>
+										<label class="uk-form-label uk-margin-small-bottom" for="edit-form-hosting-link">
+											<?php echo $title_edit_name_link; ?>
+										</label>
+										<div class="uk-form-controls">
+											<input class="uk-input" id="edit-form-hosting-link" type="text" placeholder="<?php echo $title_hosting_link; ?>">
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div>
+								<div class="uk-grid-small uk-child-width-auto" uk-grid>
+									<label>
+										<input class="uk-radio" type="radio" name="radio1">
+										<?php echo $title_edit_hosting_type_1; ?>
+									</label>
+									<label>
+										<input class="uk-radio" type="radio" name="radio1">
+										<?php echo $title_edit_hosting_type_2; ?>
+									</label>
+									<label>
+										<input class="uk-radio" type="radio" name="radio1">
+										<?php echo $title_edit_hosting_type_3; ?>
+									</label>
+								</div>	
+							</div>
+							<div>
+								<div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+									<div>
+										<label class="uk-form-label uk-margin-small-bottom" for="edit-form-hosting-login">
+											<?php echo $title_login; ?>
+										</label>
+										<div class="uk-form-controls">
+											<input class="uk-input" id="edit-form-hosting-login" type="text" placeholder="<?php echo $title_login_ph; ?>">
+										</div>
+									</div>
+									<div>
+										<label class="uk-form-label uk-margin-small-bottom" for="edit-form-hosting-pass">
+											<?php echo $title_pass; ?>
+										</label>
+										<div class="uk-form-controls">
+											<input class="uk-input" id="edit-form-hosting-pass" type="password" placeholder="<?php echo $title_pass_ph; ?>">
+										</div>
+									</div>	
+								</div>	
+							</div>
+							<div>
+								<label class="uk-form-label uk-margin-small-bottom" for="edit-form-comment">
+									<?php echo $title_comment; ?>
+								</label>
+								<div class="uk-form-controls">
+									<textarea class="uk-textarea" rows="3" placeholder="<?php echo $title_comment_ph; ?>"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="uk-text-danger uk-margin-top">
+							<?php echo $edit_alert_text; ?>
+						</div>
+				    </fieldset>
+				</form>
+			</div>
+		</div>

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+html {
+	font-family: roboto;
+	font-weight: 300;
+}
+h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6 {
+	font-family: roboto;
+}
+.tm-num-card {
+	min-width: 25px;
+}
+
+.tm-date {
+	padding: 10px;
+}
+.tm-btns-edit {
+	padding: 0 5px;
+}
+
+.count_box {
+
+}
