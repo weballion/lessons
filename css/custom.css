@@ -20,3 +20,20 @@ h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6 {
 .count_box {
 
 }
+
+.tm-totop {
+
+}
+
+.tm-totop a {
+	width: 50px;
+}
+
+.uk-totop:hover, .uk-totop:focus {
+	color: #fff;
+	outline: none;
+}
+
+.uk-input, .uk-select:not([multiple]):not([size]) {
+	height: 55px;
+}
