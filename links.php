@@ -7,7 +7,7 @@
 
     <div class="uk-position-small uk-position-top-left uk-position-fixed">
         <a href="#add_new" class="uk-button uk-button-primary" uk-icon="icon: plus" uk-tooltip="Добавить новый блок" uk-scroll></a>
-        <a href="/" class="uk-button uk-button-primary" uk-icon="icon: sign-out" uk-tooltip="Выйти"></a>
+        <a href="/?session=off" class="uk-button uk-button-primary" uk-icon="icon: sign-out" uk-tooltip="Выйти"></a>
     </div>
 
     <div class="uk-position-small uk-position-top-right uk-position-absolute uk-text-muted uk-text-small">

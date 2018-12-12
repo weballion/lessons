@@ -12,6 +12,10 @@ $error_class_pass = "";
 $error_login = "";
 $error_pass = "";
 
+if(!isset($_SESSION["auth"])) {
+    $_SESSION["auth"] = false;
+}
+
 if (isset($_POST["login_btn"])) { // проверка была ли нажата кнопка отправки
     $_SESSION["login"] = $_POST['login'];
     $_SESSION["pass"] = $_POST['pass'];
@@ -21,10 +25,10 @@ if (isset($_POST["login_btn"])) { // проверка была ли нажата
         $error = true;
     } elseif ($_SESSION["login"] != $login) {
         $error_login = "Не верный login!";
-        $error_class_pass = "uk-form-danger";
+        $error_class_login = "uk-form-danger";
         $error = true;
     } else {
-        $error_class_pass = "";
+        $error_class_login = "";
         $error = 0;
     }
     if ($_SESSION["pass"] == "" || strlen($_SESSION["pass"]) == 0) {
