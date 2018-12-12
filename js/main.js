@@ -1,4 +1,18 @@
-var delLine = document.getElementById('deleteline');
+let delLine = document.getElementById('deleteline');
 delLine.onclick = function () {
 	console.log('Нажатие кноки');
+};
+
+function logOut() {
+    //console.log('Click');
+    let answer = confirm('Выйти из системы?');
+    if (answer) {
+        let logoutLink = document.getElementById('linkId');
+        if(logoutLink) {
+            logoutLink.setAttribute('href', '/?session=off');
+        }
+    }
+    else {
+        //console.log('Отмена выхода');
+    }
 }

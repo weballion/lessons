@@ -5,12 +5,12 @@
     <!-- Выводим функции -->
     <?php include_once('func.php') ?>
 
-    <div class="uk-position-small uk-position-top-left uk-position-fixed">
+    <div class="uk-position-small uk-position-top-left uk-position-fixed" uk-scrollspy="target: > a; cls:uk-animation-fade uk-animation-fast; delay: 100">
         <a href="#add_new" class="uk-button uk-button-primary" uk-icon="icon: plus" uk-tooltip="Добавить новый блок" uk-scroll></a>
-        <a href="/?session=off" class="uk-button uk-button-primary" uk-icon="icon: sign-out" uk-tooltip="Выйти"></a>
+        <a id="linkId" href="javascript:void(0)" onclick="logOut();" class="uk-button uk-button-primary" uk-icon="icon: sign-out" uk-tooltip="Выйти"></a>
     </div>
 
-    <div class="uk-position-small uk-position-top-right uk-position-absolute uk-text-muted uk-text-small">
+    <div class="uk-position-small uk-position-top-right uk-position-absolute uk-text-muted uk-text-small" uk-scrollspy="target: > div; cls:uk-animation-fade uk-animation-fast; delay: 100">
         <div class="count_box">
             Всего записей: <?php echo sizeof($json_arr,0); ?>
         </div>
