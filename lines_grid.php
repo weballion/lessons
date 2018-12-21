@@ -1,4 +1,4 @@
-<div class="uk-child-width-1-1" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade uk-animation-fast; delay: 300">
+<div class="uk-child-width-1-1" uk-grid uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
     <?php if (is_array($json_arr)) : ?>
         <?php foreach ($json_arr as $numId => $key) : ?>
             <div>
@@ -14,11 +14,15 @@
                         </div>
                         <div class="uk-flex-middle uk-grid-small uk-margin-medium-bottom" uk-grid>
                             <div>
-                                <div class="tm-num-card uk-background-primary uk-light uk-padding-small uk-text-center uk-text-small"><?= ($numId + 1); ?></div>
+                                <div class="tm-num-card uk-background-primary uk-light uk-padding-small uk-text-center uk-text-small">
+                                    <?= ($numId + 1); ?>
+                                </div>
                             </div>
                             <div>
                                 <h3>
-                                    <a class="uk-link-heading" href="http://<?= $json_arr[$numId]["main_name_link"]; ?>" target="_blank"><?= $json_arr[$numId]["main_name"]; ?></a>
+                                    <a class="uk-link-heading" href="http://<?= $json_arr[$numId]["main_name_link"]; ?>" target="_blank">
+                                        <?= $json_arr[$numId]["main_name"]; ?>
+                                    </a>
                                 </h3>
                             </div>
                             <?php if(array_values_not_empty_check($json_arr[$numId]["add_domains"])) : ?>

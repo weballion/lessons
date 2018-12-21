@@ -1,52 +1,29 @@
-<?php
-
-$access = array();
-$access = file("access.php");
-
-$login = trim($access[1]);
-$pass = trim($access[2]);
-
-$error = 0;
-$error_class_login = "";
-$error_class_pass = "";
-$error_login = "";
-$error_pass = "";
-
-if(!isset($_SESSION["auth"])) {
-    $_SESSION["auth"] = false;
-}
-
-if (isset($_POST["login_btn"])) { // проверка была ли нажата кнопка отправки
-    $_SESSION["login"] = $_POST['login'];
-    $_SESSION["pass"] = $_POST['pass'];
-    if ($_SESSION["login"] == "" || strlen($_SESSION["login"]) == 0) {
-        $error_login = "Введите login!";
-        $error_class_login = "uk-form-danger";
-        $error = true;
-    } elseif ($_SESSION["login"] != $login) {
-        $error_login = "Не верный login!";
-        $error_class_login = "uk-form-danger";
-        $error = true;
-    } else {
-        $error_class_login = "";
-        $error = 0;
-    }
-    if ($_SESSION["pass"] == "" || strlen($_SESSION["pass"]) == 0) {
-        $error_pass = "Введите пароль!";
-        $error_class_pass = "uk-form-danger";
-        $error = true;
-    } elseif ($_SESSION["pass"] != $pass) {
-        $error_pass = "Не верный пароль!";
-        $error_class_pass = "uk-form-danger";
-        $error = true;
-    } else {
-        $error_class_pass = "";
-        $error = 0;
-    }
-    if($_SESSION["pass"] == $pass and $_SESSION["login"] == $login) {
-        $_SESSION["auth"] = true;
-    }
-    //print_r($_SESSION);
-}
-
-?>
+<div class="uk-section uk-position-relative uk-width-1-1">
+    <div class="uk-flex uk-flex-column uk-flex-middle uk-flex-center" uk-height-viewport="expand: true">
+        <div class="uk-container">
+            <div class="uk-card uk-card-default uk-card-body uk-width-large uk-margin-auto" uk-scrollspy="cls:uk-animation-slide-bottom-medium">
+                <form class="" name="login" action="" method="post">
+                    <fieldset class="uk-fieldset">
+                        <div class="uk-child-width-1-1 uk-grid-small" uk-grid>
+                            <div>
+                                <input class="uk-input <?=$error_class_login?>" type="text" placeholder="login" name="login" value="<?=(isset($_SESSION["login"]) && $_SESSION["login"] != "") ? $_SESSION["login"] : ""?>" required>
+                                <div class="uk-text-danger uk-text-small">
+                                    <?=$error_login?>
+                                </div>
+                            </div>
+                            <div>
+                                <input class="uk-input <?=$error_class_pass?>" type="password" placeholder="password" name="pass" value="<?=(isset($_SESSION["pass"]) && $_SESSION["pass"] != "") ? $_SESSION["pass"] : ""?>" required>
+                                <div class="uk-text-danger uk-text-small">
+                                    <?=$error_pass?>
+                                </div>
+                            </div>
+                            <div>
+                                <input class="uk-button uk-button-default uk-button-large uk-button-primary uk-width-1-1" type="submit" value="Войти" name="login_btn"/>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

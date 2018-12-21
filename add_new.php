@@ -1,4 +1,4 @@
-<div id="add_new" class="uk-card uk-card-default uk-card-body uk-card-hover uk-margin-large-top">
+<div id="add_new" class="uk-card uk-card-default uk-card-body uk-card-hover uk-margin-large-top" uk-scrollspy="cls:uk-animation-slide-bottom-medium">
     <form id="add_new_line" action="" method="post">
         <div class="uk-h3 uk-heading-bullet"><?php echo $title_new_line; ?></div>
         <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>

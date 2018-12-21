@@ -17,12 +17,9 @@ h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6 {
 	padding: 0 5px;
 }
 
-.count_box {
-
-}
-
-.tm-totop {
-
+.uk-button-default:hover,
+.uk-button-default:focus {
+	border-color: transparent;
 }
 
 .tm-totop a {
