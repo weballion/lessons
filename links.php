@@ -1,4 +1,6 @@
-<?php include_once('navbar.php') ?>
+<?php
+    include_once('navbar.php');
+?>
 <div class="uk-section uk-position-relative uk-width-1-1">
     <div class="uk-container">
         

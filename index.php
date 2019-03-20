@@ -1,8 +1,12 @@
 <?php
     // проверка сессия и авторизация
     require '_login.php';
+
     $newSession = new LogPass;
+
     $title = "Авторизация";
+
+    print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>

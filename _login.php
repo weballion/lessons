@@ -1,14 +1,7 @@
 <?php
-
     class LogPass {
         public $login = "";
         public $pass = "";
-    
-        public $error = 0;
-        public $error_class_login = "";
-        public $error_class_pass = "";
-        public $error_login = "";
-        public $error_pass = "";
     
         public function __construct () {
             session_start();
@@ -30,20 +23,22 @@
             }
         }
         public function authValidate () {
+            
             if (isset($_POST["login_btn"])) { // проверка была ли нажата кнопка отправки
                 $_SESSION["login"] = $_POST['login'];
                 $_SESSION["pass"] = $_POST['pass'];
+//                echo "Кнопка была нажата";
                 if ($_SESSION["login"] == "" || strlen($_SESSION["login"]) == 0) {
-                    $this->error_login = "Введите login!";
-                    $this->error_class_login = "uk-form-danger";
-                    $this->error = true;
+                    $_SESSION["error_login"] = "Введите login!";
+                    $_SESSION["error_class_login"] = "uk-form-danger";
+                    $_SESSION["error"] = "true";
                 } elseif ($_SESSION["login"] != $this->login) {
-                    $this->error_login = "Не верный login!";
-                    $this->error_class_login = "uk-form-danger";
-                    $this->error = true;
+                    $_SESSION["error_login"] = "Не верный login!";
+                    $_SESSION["error_class_login"] = "uk-form-danger";
+                    $_SESSION["error"] = "true";
                 } else {
-                    $this->error_class_login = "";
-                    $this->error = 0;
+                    $_SESSION["error_class_login"] = "";
+                    $_SESSION["error"] = "0";
                 }
                 if ($_SESSION["pass"] == "" || strlen($_SESSION["pass"]) == 0) {
                     $this->error_pass = "Введите пароль!";
@@ -62,6 +57,7 @@
                 }
             }
         }
+        
         public function sessionCheck () {
             if (isset($_GET['session']) && $_GET['session'] == "off") {
                 session_destroy();
@@ -70,6 +66,8 @@
         }
 
     }
+
+
 
     class Index {
         public static function indexLoad () {
