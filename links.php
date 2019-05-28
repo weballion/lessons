@@ -12,6 +12,6 @@
     </div>
     
     <div class="uk-padding-small uk-position-bottom-right uk-position-absolute tm-totop">
-        <a href="" class="uk-button uk-button-primary uk-light" uk-tooltip="Подняться" uk-totop uk-scroll></a>
+        <a href="" class="uk-button uk-button-primary uk-light" data-uk-tooltip="Подняться" data-uk-totop data-uk-scroll></a>
     </div>
 </div>

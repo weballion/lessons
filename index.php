@@ -1,16 +1,15 @@
 <?php
-    // проверка сессия и авторизация
+    // подлючаем файл с классами проверки авторизации и вывода контент
     require '_login.php';
 
+    // созданем новый объект
     $newSession = new LogPass;
 
-    $title = "Авторизация";
+    $title = $_SESSION["auth"] == true ? "База доступов" : "Авторизация";
 
-    print_r($_SESSION);
-    echo "<br>";
-    foreach ($_COOKIE as $key => $value) {
-        echo "<strong>" . $key . "</strong>" . " = " . $value . "<br>";
-    }
+
+    //print_r($_POST);
+
 ?>
 
 <!DOCTYPE html>

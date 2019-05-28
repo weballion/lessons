@@ -65,8 +65,9 @@
         // кодируем json и сохраняем в файл
         file_put_contents('links.json', json_encode($json_arr));
 
-        print_r($allArr);
-        echo "- DONE!";
+
+        //print_r($allArr);
+        //echo "- DONE!";
 
     };
 

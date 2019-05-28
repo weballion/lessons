@@ -1,7 +1,7 @@
-<div id="add_new" class="uk-card uk-card-default uk-card-body uk-card-hover uk-margin-large-top" uk-scrollspy="cls:uk-animation-slide-bottom-medium">
+<div id="add_new" class="uk-card uk-card-default uk-card-body uk-card-hover uk-margin-large-top" data-uk-scrollspy="cls:uk-animation-slide-bottom-medium">
     <form id="add_new_line" action="" method="post">
         <div class="uk-h3 uk-heading-bullet"><?php echo $title_new_line; ?></div>
-        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+        <div class="uk-grid-small uk-child-width-1-2@m" data-uk-grid>
             <div>
                 <label class="uk-form-label uk-margin-small-bottom" for="main_name">
                     <?php echo $title_edit_name; ?>
@@ -23,7 +23,7 @@
             <div class="uk-h4">
                 <?php echo $title_dop_domen; ?>
             </div>
-            <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+            <div class="uk-grid-small uk-child-width-1-2@m" data-uk-grid>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="additional_damain_1" name="additional_damain_1" type="text" placeholder="<?php echo $title_dop_domen_ph; ?>">
                 </div>
@@ -35,9 +35,9 @@
         <div class="uk-h4">
             <?php echo $title_hosting; ?>
         </div>
-        <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+        <div class="uk-grid-small uk-child-width-1-1" data-uk-grid>
             <div>
-                <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+                <div class="uk-grid-small uk-child-width-1-2@m" data-uk-grid>
                     <div>
                         <label class="uk-form-label uk-margin-small-bottom" for="hosting_name">
                             <?php echo $title_edit_name; ?>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div>
-                <div class="uk-grid-small uk-child-width-auto" uk-grid>
+                <div class="uk-grid-small uk-child-width-auto" data-uk-grid>
                     <label>
                         <input class="uk-radio" type="radio" name="hosting_type" value="<?php echo $title_edit_hosting_type_1; ?>">
                             <span class="uk-margin-small-left">
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div>
-                <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+                <div class="uk-grid-small uk-child-width-1-2@m" data-uk-grid>
                     <div>
                         <label class="uk-form-label uk-margin-small-bottom" for="hosting_login">
                             <?php echo $title_login; ?>
@@ -109,6 +109,7 @@
         </div>
         <div class="uk-margin-top">
             <input class="uk-button uk-button-default uk-button-primary" type="submit" value="Отправить" name="button" form="add_new_line"/>
+            <input class="uk-button uk-button-default uk-button-danger" type="reset" value="Очистить"/>
         </div>
     </form>
 </div>
