@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // обзначает что пишем на стандарте ES6
 
 console.log(leftBorderWidth); //переменная обьявлена но без занчения, undefined
 // console.log(second); // вызовит ошоибку, переменной еще нет
@@ -27,12 +27,12 @@ let person = {
     name: "John",
     age: 25,
     isMarred: false
-}
+};
 
 // общаращемся к объекту
 
 console.log(person.name);
-console.log(person["name"]);
+console.log(person[name]);
 
 let arr = ['one', 'two', 'three']; // массив, нумерация начинается с 0
 
@@ -42,4 +42,4 @@ console.log(arr[0]);
 // console.log(answer);
 
 let answer = prompt("Are u 18?", "Yes");
-console.log(typeof(arr));
+console.log("ОТВЕТ: " + answer);
